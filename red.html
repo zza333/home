@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.button {
+    background-color: #FFFFFF;
+    border: none;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration:none;
+    display: inline-block;
+    font-size: 40px;
+    cursor: pointer;
+}
+.buttona{color:red}
+.buttonb{color:black}
+buttonx{background-color: #FFFFFF;
+    border: none;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration:none;
+    display: inline-block;
+    font-size: 40px;
+position:relative;
+    cursor: pointer;
+color:green;
+animation:buttonmove 20s;
+animation-iteration-count: infinite;
+}
+@keyframes buttonmove
+{
+	0%    {left:-500px; top:100px;}
+	50%   {left:-500px; top:100px;}
+	70% {left:1000px;top:150px;}
+	80% {left:1000px;top:200px;}
+	100%{left:-500px;top:250px;}
+}
+</style>
+<script>
+</script>
+<meta charset="gbk">
+<title>红色 by zza333</title>
+</head>
+<body>
+<pre>
+                                <button onclick=alert("神经病") class="button buttona"><b>请选择 红色</b></button>
+          <button onclick=alert("色盲") class="button buttonb"><b>红色</b></button>                                     <button onclick=alert("文盲") class="button buttona"><b>黑色</b></button>
+<buttonx onclick=alert("色色的文盲")><b>绿色</b></buttonx>
+</pre>
+</body>
+</html>
