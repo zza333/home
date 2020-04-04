@@ -1,4 +1,4 @@
-ï»¿<!DOCTYPE html>
+<!DOCTYPE html>
 
 <html>
 
@@ -13,6 +13,16 @@ font-size:40px;
 }
 pb{
 font-size:20px;
+}
+@keyframes ani
+
+{
+
+	0%    {color:white;}
+	10%    {color:black;}
+	90% {color:black;}
+	100%{color:white;}
+
 }
 body
 {
@@ -29,13 +39,26 @@ body
 
 </head>
 
-<body>
+<body onload="startworker() ">
 <div style="width:1000px;height:230px"></div><br></br>
-<div style="width:1380px;height:40px;text-align:center"><pa>#0x14Då°ç«™</pa></div><br></br>
-<div style="width:1380px;height:20px;text-align:center"><pb>nothing here</pb></div><br></br>
-<div style="width:1380px;height:20px;text-align:center"><pb><a href="https://zza333.github.io/">åšå®¢</a></pb></div><br></br>
+<div style="width:1380px;height:40px;text-align:center"><pa>#0x14DĞ¡Õ¾</pa></div><br></br>
+<div style="width:1380px;height:20px;text-align:center;animation:ani 10s;animation-iteration-count: infinite;" id="nd"><pb>nothing here</pb></div><br></br>
+<div style="width:1380px;height:20px;text-align:center"><pb><a href="https://zza333.github.io/">²©¿Í</a></pb></div><br></br>
 </body>
 <script>
+var w;
+function startworker() {
+    if(typeof(Worker) !== "undefined") {
+        if(typeof(w) == "undefined") {
+            w = new Worker("worker1.js");
+        }
+        w.onmessage = function(event) {
+            document.getElementById("nd").innerHTML = event.data;
+        };
+    } else {
+        document.getElementById("nd").innerHTML = "±§Ç¸£¬ÄãµÄä¯ÀÀÆ÷²»Ö§³Ö Web Workers...";
+    }
+}
 </script>
 
 </html>
