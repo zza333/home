@@ -74,7 +74,7 @@ background:#FFFFFF;
 
 </head>
 
-<body onLoad="startworker() ">
+<body>
 
 <div style="width:120px;height:100px;position:relative;left:910px;top:110px;">
 <div1 id="dig1" class="dig">O</div1>
@@ -129,6 +129,7 @@ function startworker() {
         document.getElementById("nd").innerHTML = "抱歉，你的浏览器不支持 Web Workers...";
     }
 }
+startworker();
 var H='....';
 var H=H.split('');
 var M='.....';
