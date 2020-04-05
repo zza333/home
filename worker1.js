@@ -1,24 +1,26 @@
 var sen=new Array();
 
 sen[0]="nothing here";
-
 sen[1]="繁华世界的边缘...";
-
 sen[2]="有多少人会发现这句话每10秒钟变一次呢?";
-
 sen[3]="333=3*3*37";
-
 sen[4]="这个小站到处都是彩蛋.";
-
-sen[5]="而难益难，而险益险.";
-
+sen[5]="而难益难，而险益险...";
 sen[6]="忘了我，然后记住你忘了一个人.";
-
+sen[7]="存在感为负的感觉...";
+sen[8]="奇怪的网站.奇怪的人.";
+sen[9]="满目繁华随风而逝，只留下声声叹息.";
+sen[10]="然后去创造繁华.重新创造繁华.";
+sen[11]="然后死掉.然后.重生.";
+sen[12]="太弱了.";
+sen[13]="你是巨佬吗？";
+sen[14]="而高亦下，而近亦遥.";
+sen[15]="【闭 自 我】";
 function nchg()
 
 {
 
-    postMessage(sen[Math.floor(Math.random() * 7)]);
+    postMessage(sen[Math.floor(Math.random() * 16)]);
 
     setTimeout("nchg()",10000);
 
