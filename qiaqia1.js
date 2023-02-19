@@ -130,7 +130,7 @@ function updatep1(nTime) {
         else if(death_flag==3)p_entity.innerHTML = "(x▽x)吃的太饱力";
         updatep0();
         let nmax = 1;
-        if (level >= 3) nmax = 2;
+        if (level >= 2) nmax = 2;
         else if (fire_disp != 0 || water_disp != 0 || grass_disp != 0) nmax = 4;
         document.getElementById("p7_id").innerHTML = "提示：" + tis[Rand(1, nmax)];
         return;
