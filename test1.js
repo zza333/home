@@ -7,7 +7,9 @@ function choice(question, y, n) {
 }
 let p1_entity = document.getElementById("p1_id");
 let p1_content = "";
-let death_flag = 0,eat_count=0,hunger=0;
+let face = "(*╹▽╹*)";
+let death_flag = 0, eat_count = 0, hunger = 0;
+let level = 1,cooltime=20;
 // function fscroll() {
 //     alert("aaa");
 // }
@@ -30,7 +32,7 @@ function updatep1(nTime) {
         else document.getElementById("p_id").innerHTML ="(x▽x)我饿死啦";;
         return;
     }
-    if (nTime % 20 == 0) {
+    if (nTime % cooltime == 0) {
         if (p1_content.length >= 1) {
             hunger = 0;
             if (p1_content.length >= 50) {
@@ -38,7 +40,18 @@ function updatep1(nTime) {
             } else {
                 p1_content = p1_content.substring(0, p1_content.length - 1);
                 eat_count++;
-                document.getElementById("p_id").innerHTML = "(*╹▽╹*)我吃了" + eat_count + "个字母啦";
+                if (level == 1 && eat_count >= 20) {
+                    face = "+[*╹▽╹*]+";
+                    document.getElementById("p_id").innerHTML = face+"我进化啦";
+                    document.getElementById("p2_id").innerHTML = "等级 2";
+                    level = 2, cooltime = 10;
+                } else if (level == 2 && eat_count >= 80) {
+                    face = "+\\[*╹▽╹*]/+";
+                    document.getElementById("p_id").innerHTML = face+"我又进化啦";
+                    document.getElementById("p2_id").innerHTML = "等级 3";
+                    level = 3, cooltime = 3;
+                }
+                document.getElementById("p_id").innerHTML = face+"我吃了" + eat_count + "个字母啦";
             }
         } else {
             hunger++;
