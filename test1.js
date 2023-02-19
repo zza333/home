@@ -50,8 +50,7 @@ function updatep1(nTime) {
                     document.getElementById("p_id").innerHTML = face+"我又进化啦";
                     document.getElementById("p2_id").innerHTML = "等级 3";
                     level = 3, cooltime = 3;
-                }
-                document.getElementById("p_id").innerHTML = face+"我吃了" + eat_count + "个字母啦";
+                }else document.getElementById("p_id").innerHTML = face+"我吃了" + eat_count + "个字母啦";
             }
         } else {
             hunger++;
